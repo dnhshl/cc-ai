@@ -1,0 +1,378 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "intro",
+   "metadata": {},
+   "source": [
+    "# Python Basics - Erweiterte Version\n",
+    "\n",
+    "Dieses Notebook führt in die Basisfunktionalitäten von Python ein und enthält nach jedem Abschnitt eine kleine Aufgabe, um das Gelernte direkt anzuwenden."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "einfuhrung",
+   "metadata": {},
+   "source": [
+    "## 1. Einführung & Installation\n",
+    "\n",
+    "Hier folgt eine kurze Einführung in Python und wie man das Notebook verwendet.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "Schreibe in einer neuen Zelle einen kurzen Kommentar (z. B. mit `#`), in dem du erklärst, warum du Python lernen möchtest und was deine Erwartungen an dieses Notebook sind."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "einfuhrung-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel: Kommentar zur Motivation\n",
+    "# Ich möchte Python lernen, um datengetriebene Anwendungen zu entwickeln und mein Verständnis von Programmierung zu vertiefen."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "variablen",
+   "metadata": {},
+   "source": [
+    "## 2. Variablen und Datentypen\n",
+    "\n",
+    "Hier lernst du, wie man Variablen erstellt und grundlegende Datentypen in Python verwendet.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "Erstelle eine neue Zelle, in der du:\n",
+    "- Eine Variable für deinen Namen, dein Alter und deine Lieblingsfarbe definierst.\n",
+    "- Alle Variablen ausgibst (z. B. mit `print()`).\n",
+    "- Eine kleine Rechnung mit numerischen Variablen durchführst (Addition, Multiplikation)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "variablen-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel:\n",
+    "name = \"Max\"\n",
+    "alter = 30\n",
+    "lieblingsfarbe = \"blau\"\n",
+    "\n",
+    "print(name, alter, lieblingsfarbe)\n",
+    "\n",
+    "# Einfache Rechnung\n",
+    "zahl1 = 10\n",
+    "zahl2 = 5\n",
+    "print(\"Addition:\", zahl1 + zahl2)\n",
+    "print(\"Multiplikation:\", zahl1 * zahl2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "operatoren",
+   "metadata": {},
+   "source": [
+    "## 3. Operatoren und Ausdrücke\n",
+    "\n",
+    "In diesem Abschnitt lernst du, wie arithmetische Operationen in Python funktionieren.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "In einer neuen Zelle:\n",
+    "- Definiere zwei Zahlenvariablen.\n",
+    "- Führe alle arithmetischen Operationen (Addition, Subtraktion, Multiplikation, Division, Potenzierung) durch und drucke die Ergebnisse aus.\n",
+    "- Experimentiere mit zusammengesetzten Ausdrücken und füge Kommentare hinzu, die erklären, welche Prioritäten gelten."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "operatoren-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel:\n",
+    "a = 8\n",
+    "b = 3\n",
+    "\n",
+    "print(\"Addition:\", a + b)\n",
+    "print(\"Subtraktion:\", a - b)\n",
+    "print(\"Multiplikation:\", a * b)\n",
+    "print(\"Division:\", a / b)\n",
+    "print(\"Potenzierung:\", a ** b)\n",
+    "\n",
+    "# Zusammengesetzter Ausdruck: a + b * 2\n",
+    "# Hier wird zuerst die Multiplikation durchgeführt, danach die Addition.\n",
+    "print(\"a + b * 2:\", a + b * 2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "bedingungen",
+   "metadata": {},
+   "source": [
+    "## 4. Bedingungen (if/else)\n",
+    "\n",
+    "Hier lernst du, wie du Bedingungen in Python mit `if` und `else` umsetzt.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "Erstelle ein kleines Programm in einer neuen Zelle, das:\n",
+    "- Eine Zahl von einem Benutzer (über `input()`) einliest.\n",
+    "- Überprüft, ob die Zahl gerade oder ungerade ist, und eine entsprechende Nachricht ausgibt.\n",
+    "- Falls die Zahl negativ ist, soll eine Warnung angezeigt werden."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bedingungen-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel:\n",
+    "eingabe = input(\"Bitte eine Zahl eingeben: \")\n",
+    "\n",
+    "try:\n",
+    "    zahl = int(eingabe)\n",
+    "    if zahl < 0:\n",
+    "        print(\"Warnung: Die Zahl ist negativ!\")\n",
+    "    elif zahl % 2 == 0:\n",
+    "        print(\"Die Zahl ist gerade.\")\n",
+    "    else:\n",
+    "        print(\"Die Zahl ist ungerade.\")\n",
+    "except ValueError:\n",
+    "    print(\"Bitte eine gültige Zahl eingeben.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "schleifen",
+   "metadata": {},
+   "source": [
+    "## 5. Schleifen (for und while)\n",
+    "\n",
+    "Lerne, wie du mit Schleifen wiederholende Aufgaben lösen kannst.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "Schreibe in einer neuen Zelle zwei kleine Schleifen:\n",
+    "- Eine `for`-Schleife, die über eine Liste von Zahlen iteriert und nur die geraden Zahlen ausgibt.\n",
+    "- Eine `while`-Schleife, die eine Zahl von 1 hochzählt, bis sie einen bestimmten Grenzwert erreicht, und dabei jeden Schritt ausgibt."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "schleifen-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel for-Schleife:\n",
+    "zahlen = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+    "for zahl in zahlen:\n",
+    "    if zahl % 2 == 0:\n",
+    "        print(zahl)\n",
+    "\n",
+    "# Beispiel while-Schleife:\n",
+    "counter = 1\n",
+    "limit = 5\n",
+    "while counter <= limit:\n",
+    "    print(\"Schritt:\", counter)\n",
+    "    counter += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "datenstrukturen",
+   "metadata": {},
+   "source": [
+    "## 6. Listen, Tupel und Dictionaries\n",
+    "\n",
+    "Entdecke, wie du Datenstrukturen in Python verwenden kannst.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "In einer neuen Zelle:\n",
+    "- Erstelle eine Liste von fünf Elementen (z. B. Zahlen oder Strings) und drucke das dritte Element.\n",
+    "- Definiere ein Tupel und versuche, ein Element zu ändern (dies soll demonstrieren, dass Tupel unveränderlich sind).\n",
+    "- Erstelle ein Dictionary, das einige persönliche Informationen (z. B. Name, Alter, Stadt) enthält, und drucke einen der Werte anhand des Schlüssels."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "datenstrukturen-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel Liste:\n",
+    "meine_liste = [10, 20, 30, 40, 50]\n",
+    "print(\"Drittes Element:\", meine_liste[2])\n",
+    "\n",
+    "# Beispiel Tupel:\n",
+    "mein_tupel = (1, 2, 3)\n",
+    "# Der folgende Versuch, ein Element zu ändern, führt zu einem Fehler:\n",
+    "# mein_tupel[0] = 10\n",
+    "\n",
+    "# Beispiel Dictionary:\n",
+    "mein_dict = {\"Name\": \"Max\", \"Alter\": 30, \"Stadt\": \"Berlin\"}\n",
+    "print(\"Name:\", mein_dict[\"Name\"])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "funktionen",
+   "metadata": {},
+   "source": [
+    "## 7. Funktionen\n",
+    "\n",
+    "Lerne, wie man Funktionen in Python definiert und verwendet.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "Erstelle in einer neuen Zelle:\n",
+    "- Eine Funktion, die zwei Zahlen als Parameter entgegennimmt und deren Summe zurückgibt.\n",
+    "- Rufe die Funktion mit verschiedenen Werten auf und drucke die Ergebnisse.\n",
+    "- Ergänze die Funktion um eine kurze Dokumentation (docstring), die den Zweck der Funktion erklärt."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "funktionen-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel:\n",
+    "def addiere(a, b):\n",
+    "    \"\"\"Addiert zwei Zahlen und gibt das Ergebnis zurück.\"\"\"\n",
+    "    return a + b\n",
+    "\n",
+    "print(\"Ergebnis 1:\", addiere(5, 7))\n",
+    "print(\"Ergebnis 2:\", addiere(10, 20))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fehlerbehandlung",
+   "metadata": {},
+   "source": [
+    "## 8. Fehlerbehandlung (try/except)\n",
+    "\n",
+    "Hier lernst du, wie du Fehler in deinem Code abfängst und entsprechend reagierst.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "Schreibe in einer neuen Zelle:\n",
+    "- Einen Codeblock, der versucht, eine Zahl von einer Eingabe zu konvertieren.\n",
+    "- Fange mit einem `try/except`-Block eventuelle Fehler ab und gib eine benutzerfreundliche Fehlermeldung aus.\n",
+    "- Teste den Code mit gültigen und ungültigen Eingaben."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fehlerbehandlung-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel:\n",
+    "eingabe = input(\"Bitte eine Zahl eingeben: \")\n",
+    "try:\n",
+    "    zahl = int(eingabe)\n",
+    "    print(\"Die Zahl lautet:\", zahl)\n",
+    "except ValueError:\n",
+    "    print(\"Fehler: Das war keine gültige Zahl.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "module",
+   "metadata": {},
+   "source": [
+    "## 9. Module und Imports\n",
+    "\n",
+    "Lerne, wie du externe Module in deinem Code importierst und verwendest.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "Erstelle eine neue Zelle, in der du:\n",
+    "- Ein Standardmodul (z. B. `math`) importierst.\n",
+    "- Eine Funktion dieses Moduls (z. B. `sqrt()`) verwendest, um die Quadratwurzel einer gegebenen Zahl zu berechnen.\n",
+    "- Ein kurzes Beispielprogramm schreibst, das das Modul demonstriert."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "module-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel:\n",
+    "import math\n",
+    "\n",
+    "zahl = 16\n",
+    "wurzel = math.sqrt(zahl)\n",
+    "print(f\"Die Quadratwurzel von {zahl} ist {wurzel}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "dateieinAusgabe",
+   "metadata": {},
+   "source": [
+    "## 10. Dateiein- und -ausgabe\n",
+    "\n",
+    "Hier lernst du, wie du mit Dateien in Python arbeitest.\n",
+    "\n",
+    "**Aufgabe:**\n",
+    "\n",
+    "Erstelle in einer neuen Zelle:\n",
+    "- Einen Code, der eine kleine Textdatei erstellt und in diese schreibt.\n",
+    "- Die Datei anschließend wieder öffnet und ihren Inhalt ausgibt.\n",
+    "- Achte darauf, die Datei am Ende korrekt zu schließen oder verwende den `with`-Kontextmanager."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dateieinAusgabe-code",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Beispiel:\n",
+    "dateiname = \"beispiel.txt\"\n",
+    "\n",
+    "# Schreiben in die Datei\n",
+    "with open(dateiname, \"w\", encoding=\"utf-8\") as datei:\n",
+    "    datei.write(\"Das ist ein Beispieltext in der Datei.\")\n",
+    "\n",
+    "# Lesen der Datei\n",
+    "with open(dateiname, \"r\", encoding=\"utf-8\") as datei:\n",
+    "    inhalt = datei.read()\n",
+    "    print(inhalt)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3.x"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
